@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
+@font-face {
+    font-family: "Adlery Pro";
+    src: url("//db.onlinewebfonts.com/t/e552a73b2627d8afebb6bc486014dd9b.woff2") format("woff2"); 
+}
+
+/* -- header -- */
+
+body{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0; 
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    margin-left: 10;
+    background-color: #545454;
+    
+    
+}
+
+a{
+    color: aliceblue;
+    text-decoration:none;
+    padding-top: 60px;
+}
+
+
+#container_img{
+
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    
+    padding-bottom: .6rem;
+}
+
+.quant_container{
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    border-radius: 20px;
+    width: 5rem;
+    
+    padding: .5rem 1rem .5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantImg{
+    width: 15px;
+    height: 15px;
+}
+
+.maisCar{
+    filter: invert(24%) sepia(63%) saturate(5204%) hue-rotate(113deg) brightness(90%) contrast(106%);
+    cursor: pointer;
+}
+
+.menosCar{
+    filter: invert(16%) sepia(100%) saturate(5740%) hue-rotate(357deg) brightness(111%) contrast(124%);
+    cursor: pointer;
+}
+
+#carrinho, #user{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
+
+/* xx /header xx */
+
+/* -- Carrinho -- */
+
+#carrinho_container{
+
+    width: 30vw;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 998;
+    background-color: white;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem 5rem 1rem;
+
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 5px 5px black;
+}
+
+.carrinho-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#carrinho_container span{
+    color:grey;
+}
+
+#carrinho_container hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#carrinho_container button{
+    background-color: green;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+    box-shadow: 3px 2px 2px rgba(167, 167, 167, 0.603);
+    margin-bottom: 10rem;
+}
+
+/* xx /carrinho xx */
+
+/* ---- usuario ------ */
+#user_container{
+    width: 30vw;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 998;
+    background-color: white;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    border: 1px solid #2c2c2c;
+}
+
+#header_user{
+    background-color: black;
+    color: white;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("fundo_user.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 2rem 2rem 2.5rem 3rem;
+}
+
+#header_user h2, #header_user a{
+    margin: 1rem;
+    padding: 0;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 2rem 5rem 1rem;
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.row a {
+    color: black;
+    padding: 0;
+}
+
+.imgs_user{
+    width: 30px;
+    height: 30px;
+    margin-right: 2rem;
+    filter: invert(32%) sepia(0%) saturate(2%) hue-rotate(39deg) brightness(97%) contrast(88%);
+}
+
+/* xx /user xx */
+
+#container_finalPedido{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: .5rem;
+
+    padding: .8rem 3rem 3rem 3rem;
+
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 80%;
+    
+    background-color: black;
+}
+
+#text_finalPedido{
+    color: aliceblue; 
+    align-items: flex-start; 
+    width: 850px;
+    font-family: "Adlery Pro";
+    font-size: 4rem;
+}
+
+#underline{
+    margin-top: 0;
+    display: block;
+    
+    background-color: white;
+    height: .1rem;
+    width: 80%;
+    
+}
+
+#finalPedido{
+    background-color: white;
+    width: 80%;
+    display: flex;
+    margin: 2rem auto 1rem auto;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+}
+
+#finalPedido .column, #finalPedido .row{
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    
+    align-items: center;
+}
+
+#endCadas, #CadastrarEnd{
+    width: 300px !important;
+    border: 1px solid orange;
+    border-radius: 6px;
+    color: orange;
+    justify-content: center;
+    padding: 1rem !important;
+
+    cursor: pointer;
+
+}
+
+#endCadas img, #CadastrarEnd img{
+    width: 20px;
+    height: 20px;
+
+    margin-right: 2rem;
+
+    filter: invert(72%) sepia(35%) saturate(5382%) hue-rotate(2deg) brightness(104%) contrast(107%);
+}
+
+#finalPedido hr{
+    border: none;
+
+    background-color: #b4b4b4;
+    width: 40%;
+    height: 1px;
+
+}
+
+.ou{
+    margin-top: 2rem !important; 
+    margin-bottom: 2rem !important; 
+}
+
+#feedback{
+    position: fixed;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: .5rem;
+    padding-right: .5rem;
+
+    background-color: rgb(252, 119, 119);
+
+    border-radius: 0 2ch 2ch 0;
+    box-shadow: 0 2.5rem 2rem -2rem gray;
+
+    width: 30%;
+
+    color: white;
+
+    visibility: hidden;
+
+    animation: notifica 1s, desaparece 6s;
+}
+
+#feedback div{
+    margin-top: .5rem;
+    background-color: red;
+
+    visibility: hidden;
+
+    width: 0;
+    height: .5rem;
+
+
+    animation: diminui 6s;
+}
+
+@keyframes notifica{
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes desaparece{
+    0% {
+        visibility: visible;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100% {
+        opacity: 10%;
+        visibility: hidden;
+    }
+}
+
+@keyframes diminui{
+    0% {
+        visibility: visible;
+        width: 96%;
+    }
+    100% {
+        width: 0;
+        visibility: hidden;
+    }
+}
+
+.rad-label{
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 0;
+  margin-left: 1rem;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within{
+  background: rgba(207, 207, 207, 0.226);
+}
+
+.rad-input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design{
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+
+  background-color: orange;
+  position: relative;
+}
+
+.rad-design::before{
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.rad-input:checked+.rad-design::before{
+  transform: scale(0);
+}
+
+.rad-text{
+    color: hsl(0, 0%, 0%);
+
+    font-size: 1.2rem;
+    transition: .3s;
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.rad-input:checked~.rad-text {
+    color: hsl(0, 0%, 2%);
+}
+
+.rad-text .row{
+    justify-content: space-between;
+}
+
+#btn_selecEnd{
+    background-color: green;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    box-shadow: 3px 2px 2px rgba(167, 167, 167, 0.603);
+}
+
+#modalFinal{
+    width: 100% !important;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont_final{
+    top: 0;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 52%;
+    height: auto;
+}
+
+.cont_final span{
+    display: block;
+}
+
+.cont_final:last-child{
+    width: 40%;
+}
+
+#modalFinal strong{
+    color: orange;
+}
+
+#modalFinal span{
+    margin-bottom: 1rem;
+}
+
+#modalFinal hr{
+    border: none;
+    background-color: #2c2c2c;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#modalFinal .row{
+    width: 100% !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn_pagamento{
+    background-color:orange;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    box-shadow: 3px 2px 2px rgba(167, 167, 167, 0.603);
+}
+
+#formasPgt{
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: left;
+    padding: 1rem !important;
+    width: 40% !important;
+}
+
+#voltarFinalizacao{
+    position: absolute;
+    background-color: rgb(219, 219, 219);
+    border-radius: 0 0 6px 0;
+    border: none;
+    color: white;
+    padding: .5rem;
+    width: 10%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#voltarFinalizacao:hover{
+    color: black;
+    transition: .5s;
+}
+
+#formaEscolhida{
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid gray;
+}
+
+#formaEscolhida strong{
+    color: orange;
+}
+
+#formaEscolhida .row{
+    width: 60%;
+    justify-content: space-between;
+}
+
+#formaEscolhida input{
+    padding: .5rem;
+}
+
+#finalizarPagamento{
+    background-color:orange;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    box-shadow: 3px 2px 2px rgba(167, 167, 167, 0.603);
+}
+
+#finalizarPagamento:hover{
+    color: black;
+    transition: .5s;
+}
+
+#btn_finalizarPedido{
+    background-color: orange;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 3px 2px 2px rgba(167, 167, 167, 0.603);
+}
+
+#info_total span{
+    margin: 0;
+}
+
+#voltarPagarEnt{
+    background-color: rgb(136, 136, 136);
+    border: none;
+    color: white;
+    padding: .5rem;
+    width: 10%;
+    font-size: 1rem;
+    cursor: pointer;
+}

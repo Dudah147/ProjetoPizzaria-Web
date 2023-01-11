@@ -1,0 +1,48 @@
+head, body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    background: rgb(84, 84, 84) !important;
+}
+
+.logo-and-menu{
+    background: black;
+    height: 220px;
+}
+.container-light{
+    border: solid 4px rgb(253, 201, 01);
+    background: white;
+    /* height: 300px; */
+    margin: 1%;
+}
+
+.search-icon{
+    align-self: center;
+    max-width: 25px;
+    max-height: 25px;
+}
+.row > div {
+    margin-top: 1%;
+}
+
+.divider{
+    border: solid 2px rgb(253, 201, 01);
+}
+
+.btn-text{
+    color: red!important;
+    font-weight: bold!important;
+}
+.btn-text-active{
+    color: green!important;
+}
+.quant_input:focus, .quant_input{
+    outline: 0!important;
+    box-shadow: 0!important;
+    border: none!important;
+}
+.bg-light-grey{
+    background-color: rgb(241, 241, 241)!important;
+}

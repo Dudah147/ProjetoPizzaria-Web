@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Header.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/Gerenciarpromocoes.css" media="screen" />
+
+</head>
+
+
+
+<body style=" margin: 0; padding: 0; font-size: 16px;font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 10; background-image: url(img/fundo.png);">
+    
+    <header style="background-color: black; height: 150px;">
+        <div>
+            <div style=" display:flex; justify-content: space-between;padding-top: 10px ">
+                <h1 style="color: aliceblue; align-items: flex-start;font-family: 'Norican', cursive;;font-size: 38px;">
+                    &emsp;&emsp; PizzariaMMVRS
+                </h1>
+
+                <div style="padding-top: 20px; padding-left: 700px;">
+                    <a href="pedidosFila.html"><button   style="width: 140px; height: 50px;  background-color: gold; " >Pedidos na Fila</button></a>
+                </div>
+                <img src="img\Logo.png" alt="" style="height: 80px; ">
+            </div>
+           
+        
+            <div id="a01" style=" padding-left: 60px;  padding-right: 60px; display: flex; flex-direction: row; justify-content: space-between;">
+            
+                <a  id="a01" href="Caixa.html">Caixa</a>
+                <a  id="a02"  href="GerenciarCardápio.html">Gerenciar Cardápio</a>
+                <a  id="a03" href="GerenciarEntregadores.html">Gerenciar Entregadores</a>
+                <a  id="a04" href="GerenciarPromocoes.html">Gerenciar Promoções</a>
+                <a  id="a05" href="historico.html">Histórico</a>
+                <a  id="a06" href="orders.html">Novo Pedido+</a>
+           
+        </div>
+    </div>
+       
+        </header>
+
+
+          <div style="padding-left: 40px; display: flex; flex-direction: row; justify-content:space-between;">
+        
+         
+                <div class="formularioContato" style=" padding-top: 40px;float: left;">
+            
+                    <form class="form">
+                    <input type="hidden" id="field-id" value="" />
+    
+                    <img src="https://cdn-icons-png.flaticon.com/512/1590/1590898.png" style="width: 90px;align-items: center;" alt="">
+                    <input type="file" style="">
+                    <div class="box">
+                        <label for="field-name">TIPO</label>
+                        <input type="text" id="field-tamanho"/>
+                    </div>
+                    <div class="box">
+                        <label for="field-name">MARCA</label>
+                        <input type="number" id="field-pedacos"/>
+                    </div>
+    
+                    <div class="box">
+                        <label for="field-name">VALOR </label>
+                        <input type="text" id="field-valor"/>
+                    </div>
+    
+                    <div class="box">
+                        <label for="field-name">DESCRIÇÃO</label>
+                        <input type="text" id="field-descricao"/>
+                    </div>
+                    <div class="box">
+                        
+                        <label for="categ">Categoria:</label>
+                        <select name="categ" id="categ">
+                            <option value="tradicional">tradicional</option>
+                            <option value="especial">especial</option>
+                            <option value="premium">premium</option>
+                          </select>
+
+                    </div>
+        
+
+         </div>
+
+
+
+          <div style="float: right; padding-right: 30px; padding-top: 30px;">
+            <table id="customers">
+                <tr>
+                    <th>NOME PROMOÇÃO</th>
+                    <th>VALOR ITEM</th>
+                    <th>Código CUPOM:</th>
+                    <th>DESCRIÇÃO:</th>
+                    <th>Código item:</th> 
+                </tr>
+                <tr>
+                  <td>Broda Gratis</td>
+                  <td> 0,00</td>
+                  <td>B0RD4GR4T1S</td>
+                  <td>Insira o cumpo e receba borda grátis nos itens validos</td>
+                  <td> 01 , 02 , 03 </td>
+                </tr>
+
+            </table>
+          </div>
+
+        </div>
+
+
+
+</body>
+</html>

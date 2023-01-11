@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
+@font-face {
+    font-family: "Adlery Pro";
+    src: url("//db.onlinewebfonts.com/t/e552a73b2627d8afebb6bc486014dd9b.woff2") format("woff2"); 
+}
+
+/* -- header -- */
+
+body{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0; 
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    margin-left: 10;
+    background-color: #545454;
+    
+    
+}
+
+a{
+    color: aliceblue;
+    text-decoration:none;
+    padding-top: 60px;
+}
+
+
+#container_img{
+
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    
+    padding-bottom: .6rem;
+}
+
+.quant_container{
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    border-radius: 20px;
+    width: 5rem;
+    
+    padding: .5rem 1rem .5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantImg{
+    width: 15px;
+    height: 15px;
+}
+
+.maisCar{
+    filter: invert(24%) sepia(63%) saturate(5204%) hue-rotate(113deg) brightness(90%) contrast(106%);
+    cursor: pointer;
+}
+
+.menosCar{
+    filter: invert(16%) sepia(100%) saturate(5740%) hue-rotate(357deg) brightness(111%) contrast(124%);
+    cursor: pointer;
+}
+
+#carrinho, #user{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
+
+/* xx /header xx */
+
+/* -- Carrinho -- */
+
+#carrinho_container{
+
+    width: 30vw;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 998;
+    background-color: white;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem 5rem 1rem;
+
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 5px 5px black;
+}
+
+.carrinho-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#carrinho_container span{
+    color:grey;
+}
+
+#carrinho_container hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#carrinho_container button{
+    background-color: green;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+    box-shadow: 3px 2px 2px rgba(167, 167, 167, 0.603);
+    margin-bottom: 10rem;
+}
+
+/* xx /carrinho xx */
+
+/* ---- usuario ------ */
+#user_container{
+    width: 30vw;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 998;
+    background-color: white;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    border: 1px solid #2c2c2c;
+}
+
+#header_user{
+    background-color: black;
+    color: white;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("fundo_user.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 2rem 2rem 2.5rem 3rem;
+}
+
+#header_user h2, #header_user a{
+    margin: 1rem;
+    padding: 0;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 2rem 5rem 1rem;
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.row a {
+    color: black;
+    padding: 0;
+}
+
+.imgs_user{
+    width: 30px;
+    height: 30px;
+    margin-right: 2rem;
+    filter: invert(32%) sepia(0%) saturate(2%) hue-rotate(39deg) brightness(97%) contrast(88%);
+}
+
+/* xx /user xx */
+
+
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+    /* daqui: http://csswizardry.com/2011/10/fully-fluid-responsive-css-carousel/ */
+}
+@keyframes go{
+    0%    {  }
+    100%    { left:-300%; }
+}
+@keyframes back{
+    0%    { left:0; }
+    100%  { left:100%; }
+}
+.carousel{
+    width:100%; 
+    overflow:hidden; 
+    height:100%;}
+.paineis{
+    width:500% /* article w * 5 */; 
+    overflow:hidden;  
+    height:100%;  
+    animation:carousel 30s infinite; position:relative;}
+article{
+    float:left; 
+    width:20%;} 
+img{
+    height:100%; 
+    width:100%;
+    border-radius: 15px;
+}
+input[type=checkbox]:checked ~ .paineis{animation-play-state:paused; animation: go 10s}
+
+
+
+.img-container img{
+   width: 100%;
+   height: 100%;
+   -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
+}
+
+.img-container:hover img{
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+label{
+    display: inline-block;
+    width: 200px;
+}
+
+input, textarea {
+  border: 0;
+  outline: 0;
+  font-size: 1.2em;
+  background: transparent;
+  color: #797979;
+  position: relative;
+  font-family: 'open_sansregular';
+}
+textarea { resize: none; }
+.formulario {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    margin: 0 ;
+    border: 10px black solid;
+    border-radius: 2px;
+}
+
+.form-item {
+  position: relative;
+  width: 80%;
+  padding: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .form-item.col-responsive { width: 50%; }
+}
+.form-item .textarea {
+  height: 10em;
+}
+.form-item .input, .form-item .textarea {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  transition: all 0.3s;
+  border-bottom: 2px solid #000000;
+}
+.form-item .input:focus, .form-item .textarea:focus {
+  border-bottom: 2px solid #333333;
+}
+.form-item .input:valid + .label, .form-item .input:focus + .label, .form-item .textarea:valid + .label, .form-item .textarea:focus + .label {
+  top: 1em;
+  left: 1em;
+  font-size: 0.9em;
+}
+.form-item .input:valid, .form-item .textarea:valid {
+  border-bottom: 2px solid #000000;
+}
+.form-item .label {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  text-transform: capitalize;
+  transition: all 0.3s;
+}
+.form-item .botao {
+  display: block;
+  width:120px;
+  padding: 0.8em 0.6em;
+  border:2px #000000 solid;
+  border-radius:3px; 
+  color: #000000;;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form-item .botao:hover {
+  background: #828282;
+  color: #ffffff;
+  border:2px #828282 solid;
+}
+.form-item .botao:active {
+  background-color:#000000;;
+  color:#ffffff;
+  border:2px #000000 solid; 
+}
+/*Formulário*/
